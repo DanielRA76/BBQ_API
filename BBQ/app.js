@@ -19,6 +19,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Variables globales de template
+app.locals.titulo = 'BBQ API';
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
